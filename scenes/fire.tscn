@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bpbrpsrwpowft"]
+
+[ext_resource type="Texture2D" uid="uid://q8vnujvj1uh6" path="res://assets/sprites/Yellow Effect Bullet Impact Explosion 32x32.png" id="1_52nqi"]
+[ext_resource type="PackedScene" uid="uid://cfi4jvj128v6s" path="res://scenes/killzone.tscn" id="2_xqmqg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xqmqg"]
+atlas = ExtResource("1_52nqi")
+region = Rect2(352, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5mbl"]
+atlas = ExtResource("1_52nqi")
+region = Rect2(384, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rach5"]
+atlas = ExtResource("1_52nqi")
+region = Rect2(416, 384, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_txieb"]
+atlas = ExtResource("1_52nqi")
+region = Rect2(448, 384, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0crx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xqmqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5mbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rach5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_txieb")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0crx"]
+size = Vector2(16, 15)
+
+[node name="Fire" type="Area2D" unique_id=1797641689]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=611715694]
+scale = Vector2(0.5, 0.578125)
+sprite_frames = SubResource("SpriteFrames_v0crx")
+autoplay = "default"
+frame_progress = 0.12668522
+
+[node name="Killzone" parent="." unique_id=444586110 instance=ExtResource("2_xqmqg")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=640374687]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_v0crx")
