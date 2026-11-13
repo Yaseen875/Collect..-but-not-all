@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://b0rlb2klb4a7e" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cfi4jvj128v6s" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://bpbrpsrwpowft" path="res://scenes/fire.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://d1wpayf0jfovt" path="res://scenes/red_coin.tscn" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -357,3 +358,35 @@ position = Vector2(472, -9)
 
 [node name="Fire4" parent="Fires" unique_id=100756624 instance=ExtResource("6_p57ef")]
 position = Vector2(456, -9)
+
+[node name="Red coins" type="Node" parent="." unique_id=307309650]
+
+[node name="Red coin" parent="Red coins" unique_id=16738700 instance=ExtResource("7_u5sy4")]
+position = Vector2(57, -12)
+
+[node name="Red coin2" parent="Red coins" unique_id=1853206473 instance=ExtResource("7_u5sy4")]
+position = Vector2(153, -7)
+
+[node name="Red coin3" parent="Red coins" unique_id=1803756711 instance=ExtResource("7_u5sy4")]
+position = Vector2(312, -73)
+
+[node name="Red coin4" parent="Red coins" unique_id=195945310 instance=ExtResource("7_u5sy4")]
+position = Vector2(488, -73)
+
+[node name="Red coin6" parent="Red coins" unique_id=803802544 instance=ExtResource("7_u5sy4")]
+position = Vector2(583, -12)
+
+[node name="Red coin7" parent="Red coins" unique_id=1048510808 instance=ExtResource("7_u5sy4")]
+position = Vector2(696, -7)
+
+[node name="Red coin8" parent="Red coins" unique_id=1103954690 instance=ExtResource("7_u5sy4")]
+position = Vector2(786, -8)
+
+[node name="Red coin9" parent="Red coins" unique_id=2084440812 instance=ExtResource("7_u5sy4")]
+position = Vector2(856, -29)
+
+[node name="Red coin10" parent="Red coins" unique_id=1631303668 instance=ExtResource("7_u5sy4")]
+position = Vector2(920, -10)
+
+[node name="Red coin5" parent="Red coins" unique_id=1526013956 instance=ExtResource("7_u5sy4")]
+position = Vector2(375, -74)

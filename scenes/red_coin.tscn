@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://d1wpayf0jfovt"]
+
+[ext_resource type="Texture2D" uid="uid://bnudiy4dqd3xv" path="res://assets/sprites/MonedaR.png" id="1_f6r7p"]
+[ext_resource type="Script" uid="uid://m6xoi2pyidhk" path="res://scenes/red_coin.gd" id="1_vevyq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6r7p"]
+atlas = ExtResource("1_f6r7p")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vevyq"]
+atlas = ExtResource("1_f6r7p")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nygeu"]
+atlas = ExtResource("1_f6r7p")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxyrk"]
+atlas = ExtResource("1_f6r7p")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhy8d"]
+atlas = ExtResource("1_f6r7p")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0crx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6r7p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vevyq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nygeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxyrk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhy8d")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v0crx"]
+radius = 5.0990195
+
+[node name="Area2D" type="Area2D" unique_id=1853206473]
+collision_mask = 2
+script = ExtResource("1_vevyq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=300094487]
+position = Vector2(5.364418e-07, 0)
+scale = Vector2(0.74999994, 0.75000006)
+sprite_frames = SubResource("SpriteFrames_v0crx")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=910311036]
+shape = SubResource("CircleShape2D_v0crx")
+
+[node name="Timer" type="Timer" parent="." unique_id=2090575961]
+wait_time = 0.3
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
