@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cfi4jvj128v6s" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://bpbrpsrwpowft" path="res://scenes/fire.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://d1wpayf0jfovt" path="res://scenes/red_coin.tscn" id="7_u5sy4"]
+[ext_resource type="FontFile" uid="uid://bkpxs3leg7oeu" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="8_gee14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("1_yqjtg")
@@ -302,7 +303,7 @@ position = Vector2(398, -73)
 position = Vector2(536, -73)
 
 [node name="Coin7" parent="Coins" unique_id=2019323118 instance=ExtResource("4_lbhrr")]
-position = Vector2(600, -12)
+position = Vector2(583, -12)
 
 [node name="Coin8" parent="Coins" unique_id=453621195 instance=ExtResource("4_lbhrr")]
 position = Vector2(784, -31)
@@ -374,7 +375,7 @@ position = Vector2(312, -73)
 position = Vector2(488, -73)
 
 [node name="Red coin6" parent="Red coins" unique_id=803802544 instance=ExtResource("7_u5sy4")]
-position = Vector2(583, -12)
+position = Vector2(600, -13)
 
 [node name="Red coin7" parent="Red coins" unique_id=1048510808 instance=ExtResource("7_u5sy4")]
 position = Vector2(696, -7)
@@ -390,3 +391,34 @@ position = Vector2(920, -10)
 
 [node name="Red coin5" parent="Red coins" unique_id=1526013956 instance=ExtResource("7_u5sy4")]
 position = Vector2(375, -74)
+
+[node name="Labels" type="Node" parent="." unique_id=36465704]
+
+[node name="Label" type="Label" parent="Labels" unique_id=1108017171]
+offset_left = -101.0
+offset_top = -69.0
+offset_right = 115.0
+offset_bottom = -34.0
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 8
+text = "Collect the yellow coins ONLY.
+"
+
+[node name="Label2" type="Label" parent="Labels" unique_id=1981831407]
+modulate = Color(0, 0.41960785, 1, 1)
+offset_left = 304.0
+offset_top = -116.0
+offset_right = 519.0
+offset_bottom = -81.0
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 8
+text = "Do NOT fall into the fire."
+
+[node name="Label3" type="Label" parent="Labels" unique_id=537664849]
+offset_left = 768.0
+offset_top = -69.0
+offset_right = 867.0
+offset_bottom = -34.0
+theme_override_fonts/font = ExtResource("8_gee14")
+theme_override_font_sizes/font_size = 8
+text = "Almostttttt..."
