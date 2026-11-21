@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dipvxgb6iefkj"]
 
+[ext_resource type="Script" uid="uid://c2ativei1pwxp" path="res://scripts/game_manager.gd" id="1_3th64"]
 [ext_resource type="Texture2D" uid="uid://c32kg4n36hopk" path="res://assets/sprites/pixel-art-sky-background-with-clouds-cloudy-blue-sky-for-8bit-game-on-white-background-vector.jpg" id="1_4vmvm"]
 [ext_resource type="PackedScene" uid="uid://b5lwth2a5kdxw" path="res://scenes/player.tscn" id="2_nlmcg"]
 [ext_resource type="Texture2D" uid="uid://c3jru4wp6ao1k" path="res://assets/sprites/world_tileset.png" id="3_3vuyr"]
@@ -190,6 +191,9 @@ _data = {
 
 [node name="Ez" type="Node2D" unique_id=604945021]
 
+[node name="GameManager" type="Node" parent="." unique_id=525867326]
+script = ExtResource("1_3th64")
+
 [node name="Node2D" type="Node2D" parent="." unique_id=1754034752]
 
 [node name="PixelArtSkyBackgroundWithCloudsCloudyBlueSkyFor8BitGameOnWhiteBackgroundVector" type="Sprite2D" parent="Node2D" unique_id=1423449320]
@@ -272,7 +276,9 @@ position = Vector2(944, -11)
 [node name="Coin12" parent="Coins" unique_id=561278287 instance=ExtResource("6_bk3jl")]
 position = Vector2(1017, -10)
 
-[node name="Label" type="Label" parent="." unique_id=279444242]
+[node name="Labels" type="Node" parent="." unique_id=1254649684]
+
+[node name="Label" type="Label" parent="Labels" unique_id=279444242]
 offset_left = 29.0
 offset_top = -87.0
 offset_right = 161.0
@@ -281,7 +287,7 @@ theme_override_fonts/font = ExtResource("7_lkudh")
 theme_override_font_sizes/font_size = 8
 text = "Collect the coins!!"
 
-[node name="Label2" type="Label" parent="." unique_id=2000363769]
+[node name="Label2" type="Label" parent="Labels" unique_id=2000363769]
 offset_left = 248.0
 offset_top = -70.0
 offset_right = 427.0
@@ -290,7 +296,7 @@ theme_override_fonts/font = ExtResource("7_lkudh")
 theme_override_font_sizes/font_size = 8
 text = "Don't fall into the abyss!"
 
-[node name="Label3" type="Label" parent="." unique_id=1226976039]
+[node name="Label3" type="Label" parent="Labels" unique_id=1226976039]
 offset_left = 823.0
 offset_top = -75.0
 offset_right = 910.0
